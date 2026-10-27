@@ -1,4 +1,4 @@
-# Documentação de Dados: Urban Land Cover Dataset (OBIA)
+# Documentação de Dados: Urban Land Cover Dataset
 
 Este dicionário de dados detalha as 148 variáveis extraídas por Análise de Imagens Baseada em Objetos (OBIA). O dataset não trabalha com pixels individuais, mas com **polígonos (segmentos de imagem)**. 
 
