@@ -64,11 +64,25 @@ Foi executado um `GridSearchCV` com Validação Cruzada Estratificada (*Stratifi
 *   `n_estimators`: 100
 
 ## Resultados Finais
-O modelo atingiu uma **Acurácia Global de 85%**, mas o seu verdadeiro triunfo encontra-se no desempenho sobre as classes minoritárias face à *baseline* tradicional:
+O modelo atingiu uma **Acurácia Global de 85%**, mas o seu verdadeiro triunfo encontra-se no desempenho sobre as classes minoritárias, em especial solo e piscina:
 
-*   **Classe Solo (20 amostras):** *Recall* equivalente a 79%.
-*   **Classe Piscina (14 amostras):** A classe mais rara do dataset obteve um *Recall* 88%.
-*   **Geral:** O *F1-Score Macro* atingiu 0.86, demonstrando que o modelo consegue resgatar dados escassos sem alucinar.
+*   **Classe Solo (20 amostras):** *Recall* equivalente a 71%.
+*   **Classe Piscina (14 amostras):** A classe mais rara do dataset obteve um *Recall* 93%.
+*   **Geral:** O *F1-Score Macro* atingiu 0.85, demonstrando que o modelo consegue resgatar dados escassos sem alucinar.
+
+| Classe | Precision | Recall | F1-Score | Support |
+| :---: | :---: | :---: | :---: | :---: |
+| **Asphalt** | 0.70 | 1.00 | 0.82 | 14 |
+| **Builiding** | 0.75 | 0.84 | 0.79 | 25 |
+| **Car** | 0.93 | 0.87 | 0.90 | 15 |
+| **Concrete** | 0.81 | 0.74 | 0.77 | 23 |
+| **Grass** | 0.89 | 0.86 | 0.88 | 29 |
+| **Pool** | 1.00 | 0.93 | 0.97 | 15 |
+| **Shadown** | 1.00 | 0.81 | 0.90 | 16 |
+| **Soil** | 0.83 | 0.71 | 0.77 | 14 |
+| **Tree** | 0.83 | 0.88 | 0.86 | 17 |
+| **Macro Avg** | 0.86 | 0.85 | 0.85 | 168 |
+| **Weighted Avg** | 0.86 | 0.85 | 0.85 | 168 |
 
 ## Aplicações Práticas
 A modelagem da classificação de cobertura do solo é uma ferramenta valiosa para setores de Geointeligência e Administração pública. Desde que o modelo esteja apto para detecção de diversas classes, incluindo aquelas com menor representabilidade, é possível realizar auditorias e monitorar excessões, como:
