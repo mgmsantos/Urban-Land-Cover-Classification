@@ -131,7 +131,7 @@ print(previsoes)
 ## Possíveis melhorias
 
 ### Visão Computacional (Deep Learning)
-Caso seja possível acessar as imagens originais de satélite ou as fotografias obtidas por drone com câmera de sensor multiespectral, pode-se utilizar Renes Neurais Convulacionais para entender formatos e resolver problemas entre classes como concreto e prédio, por exemplo.
+Caso seja possível acessar as imagens originais de satélite ou as fotografias obtidas por drone com câmera de sensor multiespectral, pode-se utilizar Redes Neurais Convulacionais para entender formatos e resolver problemas entre classes como concreto e prédio, por exemplo.
 
 ### Data Fusion
 Pode-se enriquecer e melhorar as métricas do modelo adicionando uma nova fonte de dados, como por exemplo: Modelo Digital de Elevação (LiDAR), fazendo com que a máquina saiba quais classes estão em diferentes altitudes.
