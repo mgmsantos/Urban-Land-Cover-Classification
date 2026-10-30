@@ -88,9 +88,13 @@ O modelo atingiu uma **Acurácia Global de 85%**, mas o seu verdadeiro triunfo e
 | **Macro Avg** | 0.86 | 0.85 | 0.85 | 168 |
 | **Weighted Avg** | 0.86 | 0.85 | 0.85 | 168 |
 
-As classes Piscina e Sombra obtiveram precisão de 100%, e esse resultado pode ser corroborado com auxílio do t-SNE, o qual agrega e isola essas classes em comparação às outras. Devido a isso, o modelo se torna altamente confiante e preciso nessas categorias.
-
 </div>
+
+As classes Piscina e Sombra obtiveram precisão de 100%, e esse resultado pode ser corroborado com auxílio do t-SNE, o qual agrega e isola essas classes em comparação às outras. Devido a isso, o modelo se torna altamente confiante e preciso nessas categorias. Todavia, o recall ainda se encontrou em 93% e 81%, evidenciando a postura conservadora do modelo em sua previsão ao deixar passar falsos negativos.
+
+A classe concreto obteve um recall de apenas 74% e prédio obteve precisão de 75%, mesmo sendo classes com maior valor de instâncias no treino. Dessa forma, o modelo gera falsos negativos e falsos positivos para ambas as categorias em virtude da similaridade de seus materiais.
+
+A classe solo obteve o menor recall (71%) do modelo, falhando na detecção de 1/3 das amostras de solo exposto. Isso ocorre por conta das diferentes ocorrências de solo, como solo úmido, solo seco, solo compactado, solo com diferentes classes texturais, impactando na avaliação devido à nuances na refletância dessas amostras.
 
 ## Aplicações Práticas
 A modelagem da classificação de cobertura do solo é uma ferramenta valiosa para setores de Geointeligência e Administração pública. Desde que o modelo esteja apto para detecção de diversas classes, incluindo aquelas com menor representabilidade, é possível realizar auditorias e monitorar excessões, como:
