@@ -88,6 +88,8 @@ O modelo atingiu uma **Acurácia Global de 85%**, mas o seu verdadeiro triunfo e
 | **Macro Avg** | 0.86 | 0.85 | 0.85 | 168 |
 | **Weighted Avg** | 0.86 | 0.85 | 0.85 | 168 |
 
+As classes Piscina e Sombra obtiveram precisão de 100%, e esse resultado pode ser corroborado com auxílio do t-SNE, o qual agrega e isola essas classes em comparação às outras. Devido a isso, o modelo se torna altamente confiante e preciso nessas categorias.
+
 </div>
 
 ## Aplicações Práticas
