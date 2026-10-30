@@ -22,7 +22,8 @@ O dataset é composto por características extraídas de imagens por sensoriamen
   <img src="https://github.com/user-attachments/assets/866cd537-3aca-4e03-8af3-9241c7125c7c" alt="Distribuição das classes no treino" width="589">
 </p>
 
-** Sobreposição espectral e variáveis não-lineares
+**Sobreposição espectral e variáveis não-lineares**
+
 A fim de obter uma noção da complexidade acerca das 147 variáveis, aplicou-se o algoritmo t-SNE para reduzir a dimensionalidade das classes. A avaliação demonstra que os dados obtidos por sensoriamento remoto promovem uma separação clara entre algumas classes, como: asfalto, sombra, carro e piscina, em virtude das suas assinaturas espectrais serem únicas. Em contrapartida, classes como árvore e grama que compartilham reflectâncias semelhantes; concreto e prédio, visto que muitas construções possuem lajes de concreto; e o solo que está espalhado por todo o gráfico, se misturando com grama, concreto e asfalto, o que é explicado pela variação da reflectância em virtude das condições do solo (seco, molhado, compactado, etc).
 
 <p align="center">
