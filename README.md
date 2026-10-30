@@ -48,7 +48,7 @@ A classe sombra é caracterizada por apresentar a maior dispersão de NDVI, vari
 
 Visando avaliar como cada material se comporta de forma espectral, calculou-se a intensidade média das bandas R, G NIR e Bright. De posse desses resultados, é possível entender acerca das previsões realzadas pelo modelo. Observa-se categorias prédios, concreto e carro fortemente aglomeradas, com intensidade média entre 200 e 240. Essa sobreposição visual é a responsável por diminuir as métricas do modelo devido à limitação na física dos sensores.
 
-As linhas correspondentes à grama e árvores demonstram um padrão de subida acentuada na banda do infravermelho, e isso ocorre devido à elevada reflexão nesse comprimento de onda. Em contrapartida, a classe piscina apresenta uma redução brusca no NIR, característico do comportamento da água.
+As linhas correspondentes à grama e árvores demonstram um padrão de subida acentuada na banda do infravermelho, e reflete a propriedade física de elevada reflectância de vegetação viva nesse comprimento de onda. Em contrapartida, a classe piscina apresenta uma redução brusca no NIR, característico do comportamento da água.
 
 Por fim, as classes sombra e asfalto possuem as menores médias de intensidade para todas as bandas, isolando-se no gráfico e corroborando com o t-SNE.
 
