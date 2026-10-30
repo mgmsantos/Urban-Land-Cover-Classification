@@ -24,10 +24,24 @@ O dataset é composto por características extraídas de imagens por sensoriamen
 
 **Sobreposição espectral e variáveis não-lineares**
 
-A fim de obter uma noção da complexidade acerca das 147 variáveis, aplicou-se o algoritmo t-SNE para reduzir a dimensionalidade das classes. A avaliação demonstra que os dados obtidos por sensoriamento remoto promovem uma separação clara entre algumas classes, como: asfalto, sombra, carro e piscina, em virtude das suas assinaturas espectrais serem únicas. Em contrapartida, classes como árvore e grama que compartilham reflectâncias semelhantes; concreto e prédio, visto que muitas construções possuem lajes de concreto; e o solo que está espalhado por todo o gráfico, se misturando com grama, concreto e asfalto, o que é explicado pela variação da reflectância em virtude das condições do solo (seco, molhado, compactado, etc).
+A fim de obter uma noção da complexidade acerca das 147 variáveis, aplicou-se o algoritmo t-SNE para reduzir a dimensionalidade das features, as quais apresentam comportamento não-linear. A avaliação demonstra que os dados obtidos por sensoriamento remoto promovem uma separação clara entre algumas classes, como: asfalto, sombra, carro e piscina, em virtude das suas assinaturas espectrais serem únicas. Em contrapartida, classes como árvore e grama que compartilham reflectâncias semelhantes; concreto e prédio, visto que muitas construções possuem lajes de concreto; e o solo que está espalhado por todo o gráfico, se misturando com grama, concreto e asfalto, o que é explicado pela variação da reflectância em virtude das condições do solo (seco, molhado, compactado, etc).
 
 <p align="center">
   <img width="790" height="590" alt="image" src="https://github.com/user-attachments/assets/85222ad7-ea05-48ce-a0d7-84c02877a1b5">
+</p>
+
+**Índicador biofísico NDVI**
+
+O NDVI (índice de Vegetação por Diferença Normalizada) é um indicador biofísico capaz de separar elementos vegetais vivos de outros materias com base na reflexão da luz infravermelha. Observando o comportamento dessa variável nos dados de treino, percebe-se a sua relevância dentro da modelagem. Classes como árvore e grama se destacam de forma isolada, com maiores valores médios de NDVI (entre 0.17 e 0.30). Dessa forma, isso explica a elevada capacidade da separação dessas classes durante a modelagem, com destaque para as árvores que possuem variação menor em torno da média.
+
+A classe "piscina" apresentou os valores mais baixos de NDVI, e isso é explicado em virtude da absorção de radiação da água, resultando em valores fortemente negativos para esse índice. Aliado a isso, essa classe possui pouquissimas amostras, fazendo com que seja mais difícil de detectar.
+
+As classes concreto, asfalto, prédio e carro se encontram em zonas de transição, com mediana nos limites de -0.15 a 0.00. Para essas classes, o NDVI falha na distinção dos materiais, o que justifica a necessidade de manter as outras diversas features para treinar o modelo.
+
+A classe sombra é caracterizada por apresentar a maior dispersão de NDVI, variando de -0.18 a 0.25. Isso pode estar relacionado à realidade física do terreno, visto que uma sombra projetada sobre uma árvore tera uma assinatura espectral diferente de uma sombra projetada por um prédio.
+
+<p align="center">
+  <img width="790" height="390" alt="image" src="https://github.com/user-attachments/assets/a570daea-4d33-49fd-b061-4efbeb653143">
 </p>
 
 ## Metodologia e Modelagem
@@ -95,3 +109,6 @@ Caso seja possível acessar as imagens originais de satélite ou as fotografias 
 
 ### Data Fusion
 Pode-se enriquecer e melhorar as métricas do modelo adicionando uma nova fonte de dados, como por exemplo: Modelo Digital de Elevação (LiDAR), fazendo com que a máquina saiba quais classes estão em diferentes altitudes.
+
+### Feature Engineering
+Utilizando as variáveis já existentes, pode-se calcular outros indicadores biofísicos que contribuam na separação de diferentes materiais, como por exemplo o NDWI para detecção de água e melhora das métricas na classificação de piscinas.
