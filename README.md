@@ -1,4 +1,4 @@
-# Classificação de Cobertura do Solo (Land Cover Classification)
+# Classificação de Cobertura do Solo
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.0%2B-orange.svg)](https://scikit-learn.org/)
@@ -11,7 +11,7 @@ Este projeto implementa um pipeline de Machine Learning para a classificação m
 O modelo final foi otimizado para não negligenciar as classes minoritárias, garantindo zero *data leakage*) e capacidade de generalização.
 
 ## O Conjunto de Dados (Dataset)
-O dataset é composto por características extraídas de imagens (como cor, textura e espectro), totalizando 147 variáveis independentes para classificar 9 tipos de cobertura.
+O dataset é composto por características extraídas de imagens (como cor, textura e espectro), totalizando 147 variáveis independentes para classificar 9 tipos de classes. O conjunto de dados pode ser obtido em: Johnson B. Urban Land Cover [dataset]. 2013. UCI Machine Learning Repository. Available from: https://doi.org/10.24432/C53S48.
 
 **Distribuição das Classes:**
 *   **Maioritárias:** Prédio (97), Concreto (93), Árvore (89), Grama (83)
