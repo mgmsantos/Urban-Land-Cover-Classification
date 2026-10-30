@@ -1,8 +1,8 @@
 # Documentação de Dados: Urban Land Cover Dataset
 
-Este dicionário de dados detalha as 148 variáveis extraídas por Análise de Imagens Baseada em Objetos (OBIA). O dataset não trabalha com pixels individuais, mas com **polígonos (segmentos de imagem)**. 
+Este dicionário de dados detalha as 148 variáveis extraídas por Análise de Imagens Baseada em Objetos (OBIA). O dataset não trabalha com pixels individuais, mas com polígonos (segmentos de imagem), com dados obtidos por sensoriamento remoto. 
 
-A estrutura é composta por **1 variável alvo** e **21 atributos base**, que são repetidos ao longo de **7 escalas espaciais** (o próprio objeto + 6 buffers de vizinhança), totalizando 148 colunas (1 + 21 * 7 = 148).
+A estrutura é composta por 1 variável alvo e 21 atributos base, que são repetidos ao longo de 7 escalas espaciais (o próprio objeto + 6 buffers de vizinhança), totalizando 148 colunas (1 + 21 * 7 = 148).
 
 ---
 
