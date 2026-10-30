@@ -6,7 +6,7 @@
 [![Status](https://img.shields.io/badge/Status-Concluído-success.svg)]()
 
 ## Visão Geral do Projeto
-Este projeto implementa um pipeline de Machine Learning para a classificação multiclasse de cobertura do solo a partir de dados de sensoriamento remoto. O principal desafio deste projeto é o desbalanceamento de classes (variando de 97 amostras para Prédios a apenas 14 para Piscinas) num espaço de alta dimensionalidade (147 features).
+Este projeto implementa um pipeline de Machine Learning para a classificação multiclasse de cobertura do solo a partir de dados de sensoriamento remoto. O principal desafio deste projeto é o desbalanceamento de classes (variando de 97 amostras para Prédios a apenas 14 para Piscinas) num espaço de alta dimensionalidade.
 
 O modelo final foi otimizado para não negligenciar as classes minoritárias, garantindo zero *data leakage*) e capacidade de generalização.
 
@@ -29,6 +29,7 @@ Para garantir a honestidade das métricas e simular o ambiente de produção, to
 ### 2. Seleção do Algoritmo
 Foram testadas diversas arquiteturas de base (Regressão Logística, XGBoost, LightGBM, SVM, CatBoost e Extra Trees). Embora modelos de *Boosting* tenham apresentado alta precisão global, eles penalizaram severamente o *Recall* das classes raras (ex: Solo obteve apenas 43% de Recall com XGBoost). 
 A escolha técnica recaiu sobre o **Balanced Random Forest (BRF)** da biblioteca *Imbalanced-Learn*, que força um sub-amostragem balanceada na construção de cada árvore, protegendo a representatividade das minorias.
+Durante o processo de modelagem, avaliou-se a importancia das features a fim de fazer uma seleção de variáveis, todavia os testes demonstraram que, apesar da baixa contribuição, todas as features foram importantes para a classificação, especialmente em classes com poucas amostras. Nesse sentido, a remoção de algumas features prejudicava as métricas do modelo para essas classes consideradas raras em virtude do desbalanceamento dos dados.
 
 ### 3. Tuning de Hiperparâmetros
 Foi executado um `GridSearchCV` com Validação Cruzada Estratificada (*StratifiedKFold*) e foco na métrica **F1-Macro**. Isto obrigou o otimizador a dar o mesmo peso a todas às 9 classes durante a procura.
