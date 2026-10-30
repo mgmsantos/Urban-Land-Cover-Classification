@@ -44,6 +44,18 @@ A classe sombra é caracterizada por apresentar a maior dispersão de NDVI, vari
   <img width="790" height="390" alt="image" src="https://github.com/user-attachments/assets/a570daea-4d33-49fd-b061-4efbeb653143">
 </p>
 
+**Assinatura espectral**
+
+Visando avaliar como cada material se comporta de forma espectral, calculou-se a intensidade média das bandas R, G NIR e Bright. De posse desses resultados, é possível entender acerca das previsões realzadas pelo modelo. Observa-se categorias prédios, concreto e carro fortemente aglomeradas, com intensidade média entre 200 e 240. Essa sobreposição visual é a responsável por diminuir as métricas do modelo devido à limitação na física dos sensores.
+
+As linhas correspondentes à grama e árvores demonstram um padrão de subida acentuada na banda do infravermelho, e isso ocorre devido à elevada reflexão nesse comprimento de onda. Em contrapartida, a classe piscina apresenta uma redução brusca no NIR, característico do comportamento da água.
+
+Por fim, as classes sombra e asfalto possuem as menores médias de intensidade para todas as bandas, isolando-se no gráfico e corroborando com o t-SNE.
+
+<p align="center">
+  <img width="990" height="390" alt="image" src="https://github.com/user-attachments/assets/195c5714-29cd-47b1-a03a-efb1fb1fffc5" />
+</p>
+
 ## Metodologia e Modelagem
 
 ### 1. Prevenção de *Data Leakage*
@@ -95,6 +107,8 @@ As classes Piscina e Sombra obtiveram precisão de 100%, e esse resultado pode s
 A classe concreto obteve um recall de apenas 74% e prédio obteve precisão de 75%, mesmo sendo classes com maior valor de instâncias no treino. Dessa forma, o modelo gera falsos negativos e falsos positivos para ambas as categorias em virtude da similaridade de seus materiais.
 
 A classe solo obteve o menor recall (71%) do modelo, falhando na detecção de 1/3 das amostras de solo exposto. Isso ocorre por conta das diferentes ocorrências de solo, como solo úmido, solo seco, solo compactado, solo com diferentes classes texturais, impactando na avaliação devido à nuances na refletância dessas amostras.
+
+As classes sombra e asfalto obtiveram comportamentos contrários, obtendo precisão de 100% e recall de 81% para a primeira, e precisao de 70% e recall equivalente a 100% para a segunda. Nesse sentido, o modelo é bom em classificar pixels de sombra devido à sua elevada captação de luz, contudo não consegue recuperar todos os tipos de sombras, podendo citar as que são projetadas e mais claras. Se tratando do asfalto, por ser um material físico, escuro e plano, o algoritmo acaba classifando elementos como solo e telhados de predio, e possivelmente amostras de sombra.
 
 ## Aplicações Práticas
 A modelagem da classificação de cobertura do solo é uma ferramenta valiosa para setores de Geointeligência e Administração pública. Desde que o modelo esteja apto para detecção de diversas classes, incluindo aquelas com menor representabilidade, é possível realizar auditorias e monitorar excessões, como:
