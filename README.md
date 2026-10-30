@@ -41,9 +41,17 @@ Foi executado um `GridSearchCV` com Validação Cruzada Estratificada (*Stratifi
 ## Resultados Finais
 O modelo atingiu uma **Acurácia Global de 85%**, mas o seu verdadeiro triunfo encontra-se no desempenho sobre as classes minoritárias face à *baseline* tradicional:
 
-*   **Classe Solo (20 amostras):** O *Recall* saltou para **79%** (A precisão foi mantida em 85%).
-*   **Classe Piscina (14 amostras):** A classe mais rara do dataset obteve um *Recall* impressionante de **88%**.
-*   **Geral:** O *F1-Score Macro* atingiu 0.86, comprovando a eficácia da arquitetura para resgatar dados escassos sem alucinar (*Falsos Positivos*).
+*   **Classe Solo (20 amostras):** *Recall* equivalente a 79%.
+*   **Classe Piscina (14 amostras):** A classe mais rara do dataset obteve um *Recall* 88%.
+*   **Geral:** O *F1-Score Macro* atingiu 0.86, demonstrando que o modelo consegue resgatar dados escassos sem alucinar.
+
+## Aplicações Práticas
+A modelagem da classificação de cobertura do solo é uma ferramenta valiosa para setores de Geointeligência e Administração pública. Desde que o modelo esteja apto para detecção de diversas classes, incluindo aquelas com menor representabilidade, é possível realizar auditorias e monitorar excessões, como:
+
+- Auditoria fiscal e atualização cadastral: detecção de obras irregulares e atualização de IPTU;
+- Gestão de risco hídrico e prevenção de enchentes: cálculo de taxa de permeabilidade do solo urbano;
+- Monitoramento ambiental e alertas de desmatamento: fiscalização de áreas de proteção ambiental e controle de erosão;
+- Planejamento de infraestrutura e mobilidade urbana: mapeamento de malha viária e ilhas de calor.
 
 ## Como Utilizar o Modelo
 
@@ -52,3 +60,12 @@ O pipeline final encontra-se exportado e pronto para produção através da bibl
 ### Pré-requisitos
 ```bash
 pip install pandas scikit-learn imbalanced-learn joblib
+```
+
+## Possíveis melhorias
+
+### Visão Computacional (Deep Learning)
+Caso seja possível acessar as imagens originais de satélite ou as fotografias obtidas por drone com câmera de sensor multiespectral, pode-se utilizar Renes Neurais Convulacionais para entender formatos e resolver problemas entre classes como concreto e prédio, por exemplo.
+
+### Data Fusion
+Pode-se enriquecer e melhorar as métricas do modelo adicionando uma nova fonte de dados, como por exemplo: Modelo Digital de Elevação (LiDAR), fazendo com que a máquina saiba quais classes estão em diferentes altitudes.
