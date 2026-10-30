@@ -17,9 +17,8 @@ O dataset é composto por características extraídas de imagens por sensoriamen
 - A documentação das features pode ser acessada em: [Documentação Features](https://github.com/mgmsantos/Urban-Land-Cover-Classification/blob/main/documentacao_features.md)
 
 **Distribuição das Classes:**
-*   **Maioritárias:** Prédio (97), Concreto (93), Árvore (89), Grama (83)
-*   **Intermédias:** Sombra (45), Asfalto (45)
-*   **Minoritárias (Críticas):** Carro (21), Solo (20), Piscina (14)
+
+<img width="589" height="390" alt="image" src="https://github.com/user-attachments/assets/866cd537-3aca-4e03-8af3-9241c7125c7c" />
 
 ## Metodologia e Modelagem
 
