@@ -10,9 +10,11 @@ Este projeto implementa um pipeline de Machine Learning para a classificação m
 
 O modelo final foi otimizado para não negligenciar as classes minoritárias, garantindo zero *data leakage*) e capacidade de generalização.
 
-## O Conjunto de Dados (Dataset)
-O dataset é composto por características extraídas de imagens (como cor, textura e espectro), totalizando 147 variáveis independentes para classificar 9 tipos de classes. O conjunto de dados pode ser obtido em:
+## O Conjunto de Dados
+O dataset é composto por características extraídas de imagens por sensoriamento remoto, totalizando 147 variáveis independentes para classificar 9 tipos de classes. O conjunto de dados pode ser obtido em:
 - Johnson B. Urban Land Cover [dataset]. 2013. UCI Machine Learning Repository. Available from: https://doi.org/10.24432/C53S48.
+
+- A documentação das features pode ser acessada em: [Documentação Features](https://github.com/mgmsantos/Urban-Land-Cover-Classification/blob/main/documentacao_features.md)
 
 **Distribuição das Classes:**
 *   **Maioritárias:** Prédio (97), Concreto (93), Árvore (89), Grama (83)
