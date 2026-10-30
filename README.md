@@ -18,7 +18,9 @@ O dataset é composto por características extraídas de imagens por sensoriamen
 
 **Distribuição das Classes:**
 
-<img width="589" height="390" alt="image" src="https://github.com/user-attachments/assets/866cd537-3aca-4e03-8af3-9241c7125c7c" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/866cd537-3aca-4e03-8af3-9241c7125c7c" alt="Distribuição das classes no treino" width="589">
+</p>
 
 ## Metodologia e Modelagem
 
