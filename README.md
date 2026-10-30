@@ -33,10 +33,10 @@ A escolha técnica recaiu sobre o **Balanced Random Forest (BRF)** da biblioteca
 ### 3. Tuning de Hiperparâmetros
 Foi executado um `GridSearchCV` com Validação Cruzada Estratificada (*StratifiedKFold*) e foco na métrica **F1-Macro**. Isto obrigou o otimizador a dar o mesmo peso a todas às 9 classes durante a procura.
 
-**Parâmetros Vencedores (Mitigação de Overfitting):**
-*   `max_depth`: 10 (Evita árvores infinitas focadas em ruído local)
-*   `min_samples_leaf`: 2 (Exige consistência mínima nas folhas finais)
-*   `n_estimators`: 100 (Estabilidade do comitê de árvores)
+**Hiperparâmetros otimizados:**
+*   `max_depth`: 10
+*   `min_samples_leaf`: 2
+*   `n_estimators`: 100
 
 ## Resultados Finais
 O modelo atingiu uma **Acurácia Global de 85%**, mas o seu verdadeiro triunfo encontra-se no desempenho sobre as classes minoritárias face à *baseline* tradicional:
