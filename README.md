@@ -62,6 +62,21 @@ O pipeline final encontra-se exportado e pronto para produção através da bibl
 ### Pré-requisitos
 ```bash
 pip install pandas scikit-learn imbalanced-learn joblib
+
+import pandas as pd
+import joblib
+
+# 1. Carregar o modelo treinado
+modelo_producao = joblib.load('modelo_brf_cobertura_solo.pkl')
+
+# 2. Carregar novos dados (Certifique-se que possui as 147 features originais)
+novos_dados = pd.read_csv('novas_amostras_satelite.csv')
+
+# 3. Executar a previsão
+previsoes = modelo_producao.predict(novos_dados)
+
+print(previsoes)
+# Saída esperada: ['building', 'soil', 'pool', ...]
 ```
 
 ## Possíveis melhorias
