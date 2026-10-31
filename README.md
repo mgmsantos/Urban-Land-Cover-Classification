@@ -152,3 +152,13 @@ Pode-se enriquecer e melhorar as métricas do modelo adicionando uma nova fonte 
 
 ### Feature Engineering
 Utilizando as variáveis já existentes, pode-se calcular outros indicadores biofísicos que contribuam na separação de diferentes materiais, como por exemplo o NDWI para detecção de água e melhora das métricas na classificação de piscinas.
+
+## Conecte-se Comigo
+
+*Siga os links abaixo para saber mais sobre minha trajetória profissional e me contatar:*
+
+<div> 
+  <a href="mailto:miguel.gms31@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/miguelgms31/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+  <a href="http://lattes.cnpq.br/2943203054995050" target="_blank"><img src="https://img.shields.io/badge/-Lattes-%230077B5?style=for-the-badge&logo=google-scholar&logoColor=white" target="_blank"></a>
+</div>
